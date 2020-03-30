@@ -1,0 +1,37 @@
+<form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+
+  <div>
+    <label>
+      Employee Name:
+
+      <input type="text" formControlName="employee_Name" required />
+    </label>
+  </div>
+
+  <br />
+  <label>
+    Employee Salary:
+    <input type="number" formControlName="employee_Salary">
+  </label>
+  <br />
+  <br />
+  <br />
+  <label>
+    Employee DOB:
+    <input type="date" formControlName="employee_dob" required />
+  </label>
+  <button type="submit" [disabled]="!employeeForm.valid">Submit</button>
+</form>
+
+
+<hr>
+
+
+<p>
+  Form Value: {{ employeeForm.value | json }}
+</p>
+
+
+<p>
+  Form Status: {{ employeeForm.status }}
+</p>

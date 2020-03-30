@@ -1,0 +1,21 @@
+<!--<mat-grid-list  rowHeight="1:1">
+<mat-grid-tile-header>
+  
+</mat-grid-tile-header>
+  <mat-grid-tile *ngFor="let account of accounts">
+    {{account.name}}
+    {{account.balance}}
+    
+  </mat-grid-tile>
+</mat-grid-list>-->
+
+
+<mat-list role="list">
+  <mat-list-item role="listitem" *ngFor="let account of accounts">
+    <div>{{account.name}}</div>
+    <div>{{account.balance}}</div>
+
+  </mat-list-item>
+  
+</mat-list>
+<!--[style.background]="account.color?-->

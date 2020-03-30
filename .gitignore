@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.gitignore.exclude
+/.vs/AccountManagementWebApp
+/.vs/AccountManagementWebApp
+/.gitignore
+[Bb]in/
+[Oo]bj/
