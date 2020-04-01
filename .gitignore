@@ -2,9 +2,10 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-.gitignore
+
 /.gitignore.exclude
 /.vs
+.vs
 /.vs/AccountManagementWebApp
 /.vs/AccountManagementWebApp
 /.gitignore
@@ -12,4 +13,5 @@
 [Oo]bj/
 /dist
 /node_modules
-.vs
+node_modules/
+

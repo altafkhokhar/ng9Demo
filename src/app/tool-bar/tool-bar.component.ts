@@ -16,6 +16,7 @@ export class ToolBarComponent implements OnInit {
     }
 
     async lazyLoadContact() {
+        console.log('contactUs');   
         this.router.navigateByUrl('/contactUs');
 
         //console.log('ContactUsComponent');

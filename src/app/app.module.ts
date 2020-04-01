@@ -16,6 +16,8 @@ import { AppComponent } from './app.component';
 import { ListAccountsComponent } from './list-accounts/list-accounts.component';
 import { ToolBarComponent } from './tool-bar/tool-bar.component';
 import { FooterBarComponent } from './footer-bar/footer-bar.component';
+
+
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
 import { EmployeeDetailListComponent } from './employee-detail/employee-detail-list/employee-detail-list.component';
 
