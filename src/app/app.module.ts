@@ -19,7 +19,7 @@ import { FooterBarComponent } from './footer-bar/footer-bar.component';
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
 import { EmployeeDetailListComponent } from './employee-detail/employee-detail-list/employee-detail-list.component';
 
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';;
 
 
 @NgModule({

@@ -1,17 +1,21 @@
 <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
 
   <div>
+    <div *ngIf="employeeForm.controls.employee_name.errors?.required && employeeForm.controls.employee_name.touched"
+         class="demo-required">
+      *Required
+    </div> 
     <label>
       Employee Name:
 
-      <input type="text" formControlName="employee_Name" required />
+      <input type="text" formControlName="employee_name" required />
     </label>
   </div>
 
   <br />
   <label>
     Employee Salary:
-    <input type="number" formControlName="employee_Salary">
+    <input type="number" formControlName="employee_salary">
   </label>
   <br />
   <br />

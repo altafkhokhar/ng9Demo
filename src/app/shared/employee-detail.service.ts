@@ -16,6 +16,7 @@ export class EmployeeDetailService {
     list: EmployeeDetail[];
 
     result: iApiResult<EmployeeDetail[]>;
+    employeeDetail: iApiResult<EmployeeDetail>;
     constructor(private http: HttpClient) { }
 
     refreshList() {
@@ -29,6 +30,18 @@ export class EmployeeDetailService {
                 this.list = this.result.data;
                 console.log(this.list);
             });
+    }
+
+    getEmployeeDetail(id: number) {
+        
+        return this.http.get(this.rootURL + '/employees');
+       //return  this.http.get(this.rootURL + '/employee/'+id)
+       //     .subscribe
+       //     (res => {
+       //         console.log(res);
+       //         this.employeeDetail = res as iApiResult<EmployeeDetail>;
+       //         console.log(this.employeeDetail);
+       //     });
     }
 
     deleteEmployee(id: number) {

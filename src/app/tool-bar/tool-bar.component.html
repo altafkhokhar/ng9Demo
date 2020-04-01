@@ -1,9 +1,14 @@
 <!-- Toolbar -->
   <div class="toolbar" role="banner">
-    
-    <img  width="120"
+
+    <img width="120"
          alt="Angular Logo" class="logo-default" src="https://www.zobiwebsolutions.com/wp-content/themes/ZobiWebSolution/assets/images/logo-white.png" alt="logo primary">
     <span>Demo - Account Management</span>
+    <span class="toolbar-space" >
+      <button (click)="lazyLoadContact()">
+      Contact Us
+      </button>
+    </span>
     <div class="spacer"></div>
     <a aria-label="Angular on twitter" target="_blank" rel="noopener" href="https://twitter.com/angular" title="Twitter">
       <svg id="twitter-logo" height="24" data-name="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">

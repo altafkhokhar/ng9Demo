@@ -6,7 +6,7 @@
 <div class="basic-container" role="main">
 
   <app-tool-bar></app-tool-bar>
-  <a class="navIcon" routerLinkActive="active" routerLink="/employeeDetail" *ngIf="_router.url != '/employeeDetail'" >
+  <a class="navIcon" routerLinkActive="active" routerLink="/employeeDetail" *ngIf="_router.url.search('employeeDetail') == -1" >
     <mat-icon aria-hidden="false" aria-label="Example home icon" class="navLink">add</mat-icon>
   </a>
   <a class="navIcon" routerLinkActive="active" routerLink="/employeeList" *ngIf="_router.url != '/employeeList'">

@@ -9,7 +9,13 @@ import { EmployeeDetailListComponent } from './employee-detail/employee-detail-l
 const routes: Routes = [
     { path: '', redirectTo: '/employeeList', pathMatch: 'full' },
     { path: 'employeeList', component: EmployeeDetailListComponent },
-    { path: 'employeeDetail', component: EmployeeDetailComponent }
+    { path: 'employeeDetail', component: EmployeeDetailComponent },
+    { path: 'employeeDetail/:id', component: EmployeeDetailComponent },
+    {
+        path: 'contactUs', loadChildren: () => import('./contact-us/contact-us.component').then(m => m.ContactUsComponent)
+        //c  omponent: await import('./contact-us/contact-us.component')
+    }
+
 
   //{ path: '**', component: NoPageFoundComponent }
 ];

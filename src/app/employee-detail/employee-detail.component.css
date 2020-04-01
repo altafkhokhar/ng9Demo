@@ -38,6 +38,11 @@ button {
     cursor: auto;
   }
 
+.demo-required {
+  color: red;
+}
+
+
 
 /*
 Copyright Google LLC. All Rights Reserved.

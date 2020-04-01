@@ -4,7 +4,8 @@ import { FormBuilder } from '@angular/forms';
 import { Validators } from '@angular/forms';
 import { FormArray } from '@angular/forms';
 import { EmployeeDetailService } from '../shared/employee-detail.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-employee-detail',
@@ -12,18 +13,34 @@ import { ActivatedRoute } from '@angular/router';
   styles: ['./employee-detail.component.css']
 })
 export class EmployeeDetailComponent implements OnInit {
-
+    
     employeeForm = this.fb.group({
-        employee_Name: ['', Validators.required],
-        employee_Salary: [''],
+        employee_name: ['', Validators.required],
+        employee_salary: [''],
         employee_dob: ['', Validators.required]
     });
-    constructor(private fb: FormBuilder, private service: EmployeeDetailService, private actRoute: ActivatedRoute) {
-       
+    constructor(private fb: FormBuilder, private service: EmployeeDetailService, public _activatedRoute: ActivatedRoute) {
+        this.loadEmployee();
+        }
+
+    ngOnInit(): void {
+
     }
 
-  ngOnInit(): void {
-  }
+    loadEmployee() {
+        this._activatedRoute.params.subscribe(
+            params => {
+                let id: number;
+                id = params['id'];
+                this.service.getEmployeeDetail(id)
+                    .subscribe
+                    (res => {
+
+                        this.employeeForm.patchValue(res['data'][(id - 1)]);
+
+                    });
+            });
+    }
 
     onSubmit() {
         // TODO: Use EventEmitter with form value

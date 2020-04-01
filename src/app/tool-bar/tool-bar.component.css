@@ -29,3 +29,8 @@
 .spacer {
   flex: 1;
 }
+
+
+.toolbar-space {
+  padding : 30px;
+}

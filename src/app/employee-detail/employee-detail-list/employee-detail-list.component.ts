@@ -15,7 +15,6 @@ export class EmployeeDetailListComponent implements OnInit {
     constructor(public service: EmployeeDetailService, private router: Router) { }
 
     ngOnInit(): void {
-        console.log('11111');
         this.service.refreshList();
        
     }
@@ -24,8 +23,8 @@ export class EmployeeDetailListComponent implements OnInit {
         this.service.deleteEmployee(id);
     }
     goToDetail(id: number): void {
-        this.router.navigateByUrl('/employeeDetail');
-        console.log(id);
-    }
+        this.router.navigateByUrl('/employeeDetail/'+ id);
+
+       }
 }
 
