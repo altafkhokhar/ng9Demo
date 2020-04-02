@@ -12,7 +12,7 @@ export class EmployeeDetailService {
 
 
     formData: EmployeeDetail;
-    readonly rootURL = 'http://dummy.restapiexample.com/api/v1';
+    readonly rootURL = 'https://localhost:44312/';
     list: EmployeeDetail[];
 
     result: iApiResult<EmployeeDetail[]>;
@@ -21,20 +21,19 @@ export class EmployeeDetailService {
 
     refreshList() {
         
-        this.http.get(this.rootURL + '/employees')
+        this.http.get(this.rootURL + 'Employee/employees')
             .toPromise().then
             (res => {
                 
                 this.result = res as iApiResult<EmployeeDetail[]>;
-                console.log(this.result);
-                this.list = this.result.data;
+                this.list = this.result;
                 console.log(this.list);
             });
     }
 
     getEmployeeDetail(id: number) {
         
-        return this.http.get(this.rootURL + '/employees');
+        return this.http.get(this.rootURL + 'Employee/detail/'+ id);
        //return  this.http.get(this.rootURL + '/employee/'+id)
        //     .subscribe
        //     (res => {

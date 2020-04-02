@@ -35,8 +35,8 @@ export class EmployeeDetailComponent implements OnInit {
                 this.service.getEmployeeDetail(id)
                     .subscribe
                     (res => {
-
-                        this.employeeForm.patchValue(res['data'][(id - 1)]);
+                        console.log(res);
+                        this.employeeForm.patchValue(res);
 
                     });
             });

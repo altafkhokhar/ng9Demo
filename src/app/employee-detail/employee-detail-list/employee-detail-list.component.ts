@@ -16,7 +16,7 @@ export class EmployeeDetailListComponent implements OnInit {
 
     ngOnInit(): void {
         this.service.refreshList();
-       
+
     }
 
     deleteEmployee(id: number): void {

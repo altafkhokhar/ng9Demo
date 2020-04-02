@@ -10,16 +10,16 @@ import {  catchError } from 'rxjs/operators';
 @Injectable({
     providedIn: 'root'
 })
-export class AccountInfoService {
+export class AccountService {
 
 
     constructor(private httpClient: HttpClient, private http: HttpClient) { }
 
-    public getAllAccountInfo() {
+    public getAllAccounts() {
 
         var accounts: AccountInfo[]; 
 
-        return this.httpClient.get('localhost:44357/api/AccountInfo/GetAccounts').pipe(catchError(this.handleError));
+        return this.httpClient.get('localhost:44357/Accounts').pipe(catchError(this.handleError));
 
         //return this.httpClient.get('http://dummy.restapiexample.com/api/v1/employees').pipe(catchError(this.handleError));
         

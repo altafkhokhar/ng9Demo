@@ -13,7 +13,6 @@ import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
 
 import { AppComponent } from './app.component';
-import { ListAccountsComponent } from './list-accounts/list-accounts.component';
 import { ToolBarComponent } from './tool-bar/tool-bar.component';
 import { FooterBarComponent } from './footer-bar/footer-bar.component';
 
@@ -26,9 +25,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';;
 
 @NgModule({
   declarations: [
-    AppComponent,
-        ListAccountsComponent,
-    ToolBarComponent,
+    AppComponent,ToolBarComponent,
         FooterBarComponent,
         EmployeeDetailComponent,
         EmployeeDetailListComponent
