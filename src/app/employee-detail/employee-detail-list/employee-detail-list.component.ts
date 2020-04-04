@@ -10,7 +10,7 @@ import { ActivatedRouteSnapshot, Router } from '@angular/router';
 })
 export class EmployeeDetailListComponent implements OnInit {
 
-    displayedColumns: string[] = ['id', 'employee_name', 'employee_salary', 'Delete'];
+    displayedColumns: string[] = ['id', 'employee_name','account_number', 'employee_salary', 'Delete'];
 
     constructor(public service: EmployeeDetailService, private router: Router) { }
 

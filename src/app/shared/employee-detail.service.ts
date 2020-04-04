@@ -15,9 +15,7 @@ export class EmployeeDetailService {
     readonly rootURL = 'https://localhost:44312/';
     list: EmployeeDetail[];
 
-    result: iApiResult<EmployeeDetail[]>;
-    employeeDetail: iApiResult<EmployeeDetail>;
-    constructor(private http: HttpClient) { }
+   constructor(private http: HttpClient) { }
 
     refreshList() {
         
@@ -25,8 +23,8 @@ export class EmployeeDetailService {
             .toPromise().then
             (res => {
                 
-                this.result = res as iApiResult<EmployeeDetail[]>;
-                this.list = this.result;
+                //this.result = res as EmployeeDetail[];
+                this.list = res  as EmployeeDetail[];
                 console.log(this.list);
             });
     }
@@ -34,19 +32,13 @@ export class EmployeeDetailService {
     getEmployeeDetail(id: number) {
         
         return this.http.get(this.rootURL + 'Employee/detail/'+ id);
-       //return  this.http.get(this.rootURL + '/employee/'+id)
-       //     .subscribe
-       //     (res => {
-       //         console.log(res);
-       //         this.employeeDetail = res as iApiResult<EmployeeDetail>;
-       //         console.log(this.employeeDetail);
-       //     });
+       
     }
 
     deleteEmployee(id: number) {
         this.http.delete(this.rootURL + '/delete/' + id).toPromise()
             .then(res => {
-                this.result = res as iApiResult<EmployeeDetail[]>;
+                
                 this.refreshList();
             })
     }
@@ -63,20 +55,3 @@ export class EmployeeDetailService {
 
 
 
-
-
-//export class PaymentDetailService {
-   
-
-//    postPaymentDetail() {
-//        return this.http.post(this.rootURL + '/PaymentDetail', this.formData);
-//    }
-//    putPaymentDetail() {
-//        return this.http.put(this.rootURL + '/PaymentDetail/' + this.formData.PMId, this.formData);
-//    }
-//    deletePaymentDetail(id) {
-//        return this.http.delete(this.rootURL + '/PaymentDetail/' + id);
-//    }
-
-    
-//}

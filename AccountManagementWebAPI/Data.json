@@ -4,6 +4,7 @@
     "employee_name": "Mr Johsn berry",
     "employee_age": "50",
     "employee_salary": "8807.2",
+    "account_number" : "AX75223665",
     "profile_image": ""
   },
   {
@@ -11,6 +12,7 @@
     "employee_name": "Mr Wright John",
     "employee_age": "45",
     "employee_salary": "15522",
+    "account_number": "WQD75333335",
     "profile_image": ""
   }
 ]

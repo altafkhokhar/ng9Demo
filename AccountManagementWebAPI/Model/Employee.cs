@@ -11,6 +11,8 @@ namespace AccountManagementWebAPI.Model
 
     public string employee_salary { get; set; }
 
+    public string account_number { get; set; }
+
     public string profile_image { get; set; }
 
   }
